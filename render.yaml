@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: videofetch
+    runtime: docker
+    plan: free
+    region: singapore
+    healthCheckPath: /health
+    envVars:
+      - key: APP_PASSWORD
+        sync: false
+      - key: MAX_FILE_MB
+        value: 750
